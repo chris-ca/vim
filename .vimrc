@@ -12,6 +12,7 @@ execute pathogen#infect()
     set t_Co=256
 
     set ruler
+    set hidden "switch unsaved buffers
     set cursorline
     set backspace=indent,eol,start " Backspace for dummies
     set showmode
