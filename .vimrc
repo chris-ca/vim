@@ -190,9 +190,6 @@ execute pathogen#infect()
     " save with S = :w<cr>
     nnoremap S :w<CR>
 
-    " escape is 'jk' in insert mode
-    imap jk <esc>
-
     " switch buffers with F2
     map <F2> :bnext<CR>
     map <S-F2> :bprev<CR>
@@ -212,6 +209,9 @@ execute pathogen#infect()
     
     " Function keys
     set pastetoggle=<F12> " pastetoggle (sane indentation on pastes)
+    
+    " escape is 'jk' in insert mode --> disabled: stops working after some time
+    " imap jk <esc>
 
     " Folding
     inoremap <F9> <C-O>za
