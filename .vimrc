@@ -135,7 +135,10 @@ execute pathogen#infect()
 
     "}}}
 "}
-
+" Templates autoloading {
+    let $TEMPLATES = $HOME."/.vim/templates"
+    au bufnewfile *.sh 0r $TEMPLATES/sh_header.tpl
+" }
 " Formatting, Syntax {
     if has("syntax")
       syntax on
