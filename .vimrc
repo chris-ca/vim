@@ -178,6 +178,7 @@ execute pathogen#infect()
 " Remappings, Hotkeys, Macros {
 
     let mapleader = "\<Space>"
+    autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
     " gs = git-status
     nmap <leader>gs :Gstatus<CR><C-W>15+
@@ -212,12 +213,6 @@ execute pathogen#infect()
     
     " escape is 'jk' in insert mode --> disabled: stops working after some time
     " imap jk <esc>
-
-    " Folding
-    inoremap <F9> <C-O>za
-    nnoremap <F9> za
-    onoremap <F9> <C-C>za
-    vnoremap <F9> zf
 
 " }
 
