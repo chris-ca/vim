@@ -1,4 +1,9 @@
 execute pathogen#infect()
+"
+" lets try the mouse
+set ttymouse=xterm2
+set mouse=a
+
 
 " Theme, Window, Look and Feel {
     set background=dark
@@ -187,7 +192,6 @@ execute pathogen#infect()
     nmap <leader>gs :Gstatus<CR><C-W>15+
 
     nmap <leader><leader> V
-
     " jump between buffers
     nnoremap gb :ls<CR>:b<Space>
 
