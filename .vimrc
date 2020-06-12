@@ -189,6 +189,10 @@ set mouse=a
     let mapleader = "\<Space>"
     autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
+    nmap <C-H>  <C-W>h
+    nmap <C-J>  <C-W>j
+    nmap <C-K>  <C-W>k
+    nmap <C-L>  <C-W>l
     " gs = git-status
     nmap <leader>gs :Gstatus<CR><C-W>15+
 
