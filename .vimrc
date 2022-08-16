@@ -185,9 +185,12 @@ set mouse=a
 " }
 
 " Remappings, Hotkeys, Macros {
-
     let mapleader = "\<Space>"
     autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+    au FileType python map <leader>b obreakpoint()<esc>
+    au FileType python map <leader>B Obreakpoint()<esc>
+
 
     nmap <C-H>  <C-W>h
     nmap <C-J>  <C-W>j
