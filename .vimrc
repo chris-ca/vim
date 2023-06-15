@@ -183,14 +183,22 @@ set mouse=a
     set incsearch       " Find as you type search
     set hlsearch        " Highlight search terms
 " }
-
-" Remappings, Hotkeys, Macros {
-    let mapleader = "\<Space>"
+" Python stuff {
+    autocmd FileType python map <buffer> <leader>f :call flake8#Flake8()<CR>
     autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
     au FileType python map <leader>b obreakpoint()<esc>
     au FileType python map <leader>B Obreakpoint()<esc>
 
+" }
+
+" Remappings, Hotkeys, Macros {
+    let mapleader = "\<Space>"
+
+    " Edit vimr configuration file
+    nnoremap confe :e $MYVIMRC<CR>
+    " Reload vims configuration file
+    nnoremap confr :source $MYVIMRC<CR>
 
     nmap <C-H>  <C-W>h
     nmap <C-J>  <C-W>j
